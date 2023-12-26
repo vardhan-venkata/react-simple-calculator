@@ -16,6 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { IoSunnySharp, IoMoon } from "react-icons/io5";
 
+const colorScheme = process.env.REACT_APP_COLOR_SCHEME;
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
   const [result, setResult] = useState("");
@@ -81,7 +82,7 @@ function App() {
               <Spacer />
               <Box p="1">
                 <IconButton
-                  colorScheme="teal"
+                  colorScheme={colorScheme}
                   aria-label="Toggle dark"
                   onClick={toggleColorMode}
                   icon={colorMode === "light" ? <IoSunnySharp /> : <IoMoon />}

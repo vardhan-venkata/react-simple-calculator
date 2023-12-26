@@ -8,6 +8,9 @@ import {
   CardBody,
 } from "@chakra-ui/react";
 import { MdBackspace } from "react-icons/md";
+const colorScheme = process.env.REACT_APP_COLOR_SCHEME;
+
+console.log("colorScheme", colorScheme);
 
 function KeysComponent({ handleButtonClick }) {
   return (
@@ -18,7 +21,7 @@ function KeysComponent({ handleButtonClick }) {
             <Box>
               <Stack direction="row" spacing={4} align="center">
                 <Button
-                  colorScheme="teal"
+                  colorScheme={colorScheme}
                   variant="solid"
                   rounded={"inherit"}
                   size="md"
@@ -26,46 +29,46 @@ function KeysComponent({ handleButtonClick }) {
                   width="50px"
                   border="2px"
                   borderRadius={"5px"}
-                  borderColor="green.500"
+                  borderColor={`${colorScheme}.500`}
                   onClick={() => handleButtonClick("AC")}
                 >
                   AC
                 </Button>
                 <Button
-                  colorScheme="teal"
+                  colorScheme={colorScheme}
                   variant="ghost"
                   size="md"
                   height="48px"
                   width="50px"
                   border="2px"
                   borderRadius={"5px"}
-                  borderColor="green.500"
+                  borderColor={`${colorScheme}.500`}
                   onClick={() => handleButtonClick("clear")}
                 >
                   <MdBackspace />
                 </Button>
                 <Button
-                  colorScheme="teal"
+                  colorScheme={colorScheme}
                   variant="ghost"
                   size="md"
                   height="48px"
                   width="50px"
                   border="2px"
                   borderRadius={"5px"}
-                  borderColor="green.500"
+                  borderColor={`${colorScheme}.500`}
                   onClick={() => handleButtonClick("+/-")}
                 >
                   +/-
                 </Button>
                 <Button
-                  colorScheme="teal"
+                  colorScheme={colorScheme}
                   variant="ghost"
                   size="md"
                   height="48px"
                   width="50px"
                   border="2px"
                   borderRadius={"5px"}
-                  borderColor="green.500"
+                  borderColor={`${colorScheme}.500`}
                   onClick={() => handleButtonClick("C")}
                 >
                   /
@@ -75,53 +78,53 @@ function KeysComponent({ handleButtonClick }) {
             <Box>
               <Stack direction="row" spacing={4} align="center">
                 <Button
-                  colorScheme="teal"
+                  colorScheme={colorScheme}
                   variant="ghost"
                   size="md"
                   height="48px"
                   width="50px"
                   border="2px"
                   borderRadius={"5px"}
-                  borderColor="green.500"
+                  borderColor={`${colorScheme}.500`}
                   onClick={() => handleButtonClick("4")}
                 >
                   4
                 </Button>
                 <Button
-                  colorScheme="teal"
+                  colorScheme={colorScheme}
                   variant="ghost"
                   size="md"
                   height="48px"
                   width="50px"
                   border="2px"
                   borderRadius={"5px"}
-                  borderColor="green.500"
+                  borderColor={`${colorScheme}.500`}
                   onClick={() => handleButtonClick("5")}
                 >
                   5
                 </Button>
                 <Button
-                  colorScheme="teal"
+                  colorScheme={colorScheme}
                   variant="ghost"
                   size="md"
                   height="48px"
                   width="50px"
                   border="2px"
                   borderRadius={"5px"}
-                  borderColor="green.500"
+                  borderColor={`${colorScheme}.500`}
                   onClick={() => handleButtonClick("6")}
                 >
                   6
                 </Button>
                 <Button
-                  colorScheme="teal"
+                  colorScheme={colorScheme}
                   variant="ghost"
                   size="md"
                   height="48px"
                   width="50px"
                   border="2px"
                   borderRadius={"5px"}
-                  borderColor="green.500"
+                  borderColor={`${colorScheme}.500`}
                   onClick={() => handleButtonClick("-")}
                 >
                   -
@@ -131,53 +134,53 @@ function KeysComponent({ handleButtonClick }) {
             <Box>
               <Stack direction="row" spacing={4} align="center">
                 <Button
-                  colorScheme="teal"
+                  colorScheme={colorScheme}
                   variant="ghost"
                   size="md"
                   height="48px"
                   width="50px"
                   border="2px"
                   borderRadius={"5px"}
-                  borderColor="green.500"
+                  borderColor={`${colorScheme}.500`}
                   onClick={() => handleButtonClick("1")}
                 >
                   1
                 </Button>
                 <Button
-                  colorScheme="teal"
+                  colorScheme={colorScheme}
                   variant="ghost"
                   size="md"
                   height="48px"
                   width="50px"
                   border="2px"
                   borderRadius={"5px"}
-                  borderColor="green.500"
+                  borderColor={`${colorScheme}.500`}
                   onClick={() => handleButtonClick("2")}
                 >
                   2
                 </Button>
                 <Button
-                  colorScheme="teal"
+                  colorScheme={colorScheme}
                   variant="ghost"
                   size="md"
                   height="48px"
                   width="50px"
                   border="2px"
                   borderRadius={"5px"}
-                  borderColor="green.500"
+                  borderColor={`${colorScheme}.500`}
                   onClick={() => handleButtonClick("3")}
                 >
                   3
                 </Button>
                 <Button
-                  colorScheme="teal"
+                  colorScheme={colorScheme}
                   variant="ghost"
                   size="md"
                   height="48px"
                   width="50px"
                   border="2px"
                   borderRadius={"5px"}
-                  borderColor="green.500"
+                  borderColor={`${colorScheme}.500`}
                   onClick={() => handleButtonClick("+")}
                 >
                   +
@@ -187,53 +190,53 @@ function KeysComponent({ handleButtonClick }) {
             <Box>
               <Stack direction="row" spacing={4} align="center">
                 <Button
-                  colorScheme="teal"
+                  colorScheme={colorScheme}
                   variant="ghost"
                   size="md"
                   height="48px"
                   width="50px"
                   border="2px"
                   borderRadius={"5px"}
-                  borderColor="green.500"
+                  borderColor={`${colorScheme}.500`}
                   onClick={() => handleButtonClick("1")}
                 >
                   %
                 </Button>
                 <Button
-                  colorScheme="teal"
+                  colorScheme={colorScheme}
                   variant="ghost"
                   size="md"
                   height="48px"
                   width="50px"
                   border="2px"
                   borderRadius={"5px"}
-                  borderColor="green.500"
+                  borderColor={`${colorScheme}.500`}
                   onClick={() => handleButtonClick("2")}
                 >
                   0
                 </Button>
                 <Button
-                  colorScheme="teal"
+                  colorScheme={colorScheme}
                   variant="ghost"
                   size="md"
                   height="48px"
                   width="50px"
                   border="2px"
                   borderRadius={"5px"}
-                  borderColor="green.500"
+                  borderColor={`${colorScheme}.500`}
                   onClick={() => handleButtonClick("3")}
                 >
                   .
                 </Button>
                 <Button
-                  colorScheme="teal"
+                  colorScheme={colorScheme}
                   variant="solid"
                   size="md"
                   height="48px"
                   width="50px"
                   border="2px"
                   borderRadius={"5px"}
-                  borderColor="green.500"
+                  borderColor={`${colorScheme}.500`}
                   onClick={() => handleButtonClick("=")}
                 >
                   =
