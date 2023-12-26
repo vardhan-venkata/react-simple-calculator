@@ -12,21 +12,21 @@
 
 ### Sample Theme
 
-# Blue
+# <p color="blue">Blue</p>
 
- <img src="./demoImages/blue-dark.png" width="20px">
- <img src="./demoImages/blue-light.png">
+ <img src="./demoImages/blue-dark.png" width="100px" height="90px">
+ <img src="./demoImages/blue-light.png" width="100px" height="90px">
 
 # Purple
 
- <img src="./demoImages/purple-dark.png">
- <img src="./demoImages/purple-light.png">
+ <img src="./demoImages/purple-dark.png" width="100px" height="90px">
+ <img src="./demoImages/purple-light.png" width="100px" height="90px">
 
 # Teal
 
- <img src="./demoImages/Teal-Dark.png">
- <img src="./demoImages/Teal-light-history.png">
- <img src="./demoImages/teal-dark-history.png">
+ <img src="./demoImages/Teal-Dark.png" width="100px" height="90px">
+ <img src="./demoImages/Teal-light-history.png" width="100px" height="90px">
+ <img src="./demoImages/teal-dark-history.png" width="100px" height="90px">
 
 ### Demo URL
 
