@@ -2,7 +2,7 @@
 
 ## Description
 
-- This is a simple calculator app, created using react, eval,
+- This is a simple calculator app, created using react, eval, and chakra UI.
 
 ## Packages used
 
