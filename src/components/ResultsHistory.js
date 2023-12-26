@@ -28,6 +28,7 @@ function ResultsHistory({ results }) {
   const removeHistory = () => {
     localStorage.setItem("calc-history", []);
     toggleConfirmationModal();
+    window.location.reload();
   };
   return (
     <div>
@@ -39,7 +40,7 @@ function ResultsHistory({ results }) {
           <Spacer />
           <Box p="1">
             <IconButton
-              colorScheme={colorScheme}
+              colorScheme={colorScheme ? colorScheme : "blue"}
               aria-label="Toggle confirmation Modal"
               onClick={toggleConfirmationModal}
               icon={<MdOutlineDeleteOutline />}

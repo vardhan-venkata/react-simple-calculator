@@ -93,7 +93,7 @@ function App() {
         alignContent={"center"}
       >
         {" "}
-        <Card width={380} height={540}>
+        <Card width={380} height={"auto"}>
           <CardHeader>
             <Flex>
               <Box p="1">
@@ -102,7 +102,7 @@ function App() {
               <Spacer />
               <Box p="1">
                 <IconButton
-                  colorScheme={colorScheme}
+                  colorScheme={colorScheme ? colorScheme : "blue"}
                   aria-label="Toggle history"
                   onClick={toggleHistory}
                   icon={<FaHistory />}
@@ -110,7 +110,7 @@ function App() {
               </Box>
               <Box p="1">
                 <IconButton
-                  colorScheme={colorScheme}
+                  colorScheme={colorScheme ? colorScheme : "blue"}
                   aria-label="Toggle dark"
                   onClick={toggleColorMode}
                   icon={colorMode === "light" ? <IoSunnySharp /> : <IoMoon />}
@@ -130,24 +130,28 @@ function App() {
           <CardBody>
             <Stack spacing="3">
               <Box>
-                <ResultPanel
-                  result={result}
-                  handleExpressionChange={handleExpressionChange}
-                />
-              </Box>
-              <Box>
-                <KeysComponent handleButtonClick={handleButtonClick} />
+                <Box>
+                  <Box>
+                    <ResultPanel
+                      result={result}
+                      handleExpressionChange={handleExpressionChange}
+                    />
+                  </Box>
+                  <Box>
+                    <KeysComponent handleButtonClick={handleButtonClick} />
+                  </Box>
+                </Box>
+                <Box paddingY={5}>
+                  {showHistory ? (
+                    <>
+                      <ResultsHistory results={resultsFromLocalStorage} />
+                    </>
+                  ) : null}
+                </Box>
               </Box>
             </Stack>
           </CardBody>
         </Card>
-        <Box marginLeft={"15px"}>
-          {showHistory ? (
-            <>
-              <ResultsHistory results={resultsFromLocalStorage} />
-            </>
-          ) : null}
-        </Box>
       </Box>
     </>
   );

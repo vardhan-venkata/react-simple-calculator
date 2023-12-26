@@ -10,7 +10,7 @@ function ResultPanel({ result, handleExpressionChange }) {
       <Input
         placeholder="Expression value"
         value={result}
-        focusBorderColor={`${colorScheme}.400`}
+        focusBorderColor={`${colorScheme ? colorScheme : "blue"}.400`}
         onChange={(e) => handleExpressionChange(e.target.value)}
       />
     </Box>
