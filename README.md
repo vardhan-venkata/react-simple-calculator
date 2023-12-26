@@ -14,7 +14,7 @@
 
 # Blue
 
- <img src="./demoImages/blue-dark.png">
+ <img src="./demoImages/blue-dark.png" width="20px">
  <img src="./demoImages/blue-light.png">
 
 # Purple
