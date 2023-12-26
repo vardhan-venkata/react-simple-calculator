@@ -69,7 +69,7 @@ function KeysComponent({ handleButtonClick }) {
                   border="2px"
                   borderRadius={"5px"}
                   borderColor={`${colorScheme}.500`}
-                  onClick={() => handleButtonClick("C")}
+                  onClick={() => handleButtonClick("/")}
                 >
                   /
                 </Button>
@@ -198,7 +198,7 @@ function KeysComponent({ handleButtonClick }) {
                   border="2px"
                   borderRadius={"5px"}
                   borderColor={`${colorScheme}.500`}
-                  onClick={() => handleButtonClick("1")}
+                  onClick={() => handleButtonClick("%")}
                 >
                   %
                 </Button>
@@ -211,7 +211,7 @@ function KeysComponent({ handleButtonClick }) {
                   border="2px"
                   borderRadius={"5px"}
                   borderColor={`${colorScheme}.500`}
-                  onClick={() => handleButtonClick("2")}
+                  onClick={() => handleButtonClick("0")}
                 >
                   0
                 </Button>
@@ -224,7 +224,7 @@ function KeysComponent({ handleButtonClick }) {
                   border="2px"
                   borderRadius={"5px"}
                   borderColor={`${colorScheme}.500`}
-                  onClick={() => handleButtonClick("3")}
+                  onClick={() => handleButtonClick(".")}
                 >
                   .
                 </Button>

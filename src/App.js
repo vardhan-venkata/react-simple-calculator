@@ -15,11 +15,19 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import { IoSunnySharp, IoMoon } from "react-icons/io5";
+import { FaHistory } from "react-icons/fa";
+import ResultsHistory from "./components/ResultsHistory";
 
 const colorScheme = process.env.REACT_APP_COLOR_SCHEME;
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
   const [result, setResult] = useState("");
+  const [showHistory, setShowHistory] = useState(false);
+  let resultsFromLocalStorage = [];
+  resultsFromLocalStorage =
+    localStorage.getItem("calc-history") &&
+    JSON.parse(localStorage.getItem("calc-history"));
+
   const toast = useToast();
   const toastIdRef = React.useRef();
 
@@ -46,10 +54,22 @@ function App() {
   function resetResult() {
     setResult("");
   }
+  function toggleHistory() {
+    console.log("toggleHistory", !showHistory);
+    setShowHistory(!showHistory);
+  }
   function calculateResult() {
     try {
       //eslint-disable-next-line
       setResult(eval(result));
+      let resultsArray = [];
+      if (resultsFromLocalStorage) {
+        resultsArray = [...resultsFromLocalStorage];
+      }
+      //eslint-disable-next-line
+      let resultObject = { expression: result, value: eval(result) };
+      resultsArray.push(resultObject);
+      localStorage.setItem("calc-history", JSON.stringify(resultsArray));
     } catch (error) {
       console.log("error", error);
       addToast();
@@ -83,6 +103,14 @@ function App() {
               <Box p="1">
                 <IconButton
                   colorScheme={colorScheme}
+                  aria-label="Toggle history"
+                  onClick={toggleHistory}
+                  icon={<FaHistory />}
+                />
+              </Box>
+              <Box p="1">
+                <IconButton
+                  colorScheme={colorScheme}
                   aria-label="Toggle dark"
                   onClick={toggleColorMode}
                   icon={colorMode === "light" ? <IoSunnySharp /> : <IoMoon />}
@@ -113,6 +141,13 @@ function App() {
             </Stack>
           </CardBody>
         </Card>
+        <Box marginLeft={"15px"}>
+          {showHistory ? (
+            <>
+              <ResultsHistory results={resultsFromLocalStorage} />
+            </>
+          ) : null}
+        </Box>
       </Box>
     </>
   );
