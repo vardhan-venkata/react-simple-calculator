@@ -8,10 +8,16 @@ import {
   CardHeader,
   Box,
   Stack,
+  Flex,
+  Spacer,
+  IconButton,
+  useToast,
+  useColorMode,
 } from "@chakra-ui/react";
-import { useToast } from "@chakra-ui/react";
+import { IoSunnySharp, IoMoon } from "react-icons/io5";
 
 function App() {
+  const { colorMode, toggleColorMode } = useColorMode();
   const [result, setResult] = useState("");
   const toast = useToast();
   const toastIdRef = React.useRef();
@@ -57,34 +63,57 @@ function App() {
     });
   }
   return (
-    <Box
-      padding={5}
-      display={"flex"}
-      justifyContent={"center"}
-      alignItems={"center"}
-      alignContent={"center"}
-    >
-      {" "}
-      <Card width={380} height={500}>
-        <CardHeader>
-          <Heading size="md">Calculator</Heading>
-        </CardHeader>
+    <>
+      <Box
+        padding={5}
+        display={"flex"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        alignContent={"center"}
+      >
+        {" "}
+        <Card width={380} height={540}>
+          <CardHeader>
+            <Flex>
+              <Box p="1">
+                <Heading size="lg">Calculator</Heading>
+              </Box>
+              <Spacer />
+              <Box p="1">
+                <IconButton
+                  colorScheme="teal"
+                  aria-label="Toggle dark"
+                  onClick={toggleColorMode}
+                  icon={colorMode === "light" ? <IoSunnySharp /> : <IoMoon />}
+                />
+                {/* <Switch
+                  size="lg"
+                  colorScheme="teal"
+                  onChange={toggleColorMode}
+                  aria-label={
+                    colorMode === "light" ? <IoSunnySharp /> : <IoMoon />
+                  }
+                ></Switch> */}
+              </Box>
+            </Flex>
+          </CardHeader>
 
-        <CardBody>
-          <Stack spacing="3">
-            <Box>
-              <ResultPanel
-                result={result}
-                handleExpressionChange={handleExpressionChange}
-              />
-            </Box>
-            <Box>
-              <KeysComponent handleButtonClick={handleButtonClick} />
-            </Box>
-          </Stack>
-        </CardBody>
-      </Card>
-    </Box>
+          <CardBody>
+            <Stack spacing="3">
+              <Box>
+                <ResultPanel
+                  result={result}
+                  handleExpressionChange={handleExpressionChange}
+                />
+              </Box>
+              <Box>
+                <KeysComponent handleButtonClick={handleButtonClick} />
+              </Box>
+            </Stack>
+          </CardBody>
+        </Card>
+      </Box>
+    </>
   );
 }
 
