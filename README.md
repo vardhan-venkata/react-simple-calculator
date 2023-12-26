@@ -14,19 +14,19 @@
 
 # <p color="blue">Blue</p>
 
- <img src="./demoImages/blue-dark.png" width="100px" height="90px">
- <img src="./demoImages/blue-light.png" width="100px" height="90px">
+ <img src="./demoImages/blue-dark.png" width="200px" height="150px">
+ <img src="./demoImages/blue-light.png" width="200px" height="150px">
 
 # Purple
 
- <img src="./demoImages/purple-dark.png" width="100px" height="90px">
- <img src="./demoImages/purple-light.png" width="100px" height="90px">
+ <img src="./demoImages/purple-dark.png" width="200px" height="150px">
+ <img src="./demoImages/purple-light.png" width="200px" height="150px">
 
 # Teal
 
- <img src="./demoImages/Teal-Dark.png" width="100px" height="90px">
- <img src="./demoImages/Teal-light-history.png" width="100px" height="90px">
- <img src="./demoImages/teal-dark-history.png" width="100px" height="90px">
+ <img src="./demoImages/Teal-Dark.png" width="200px" height="150px">
+ <img src="./demoImages/Teal-light-history.png" width="200px" height="150px">
+ <img src="./demoImages/teal-dark-history.png" width="200px" height="150px">
 
 ### Demo URL
 
